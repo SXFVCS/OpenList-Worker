@@ -40,7 +40,7 @@
     "dist"
   ],
   "homepage": "https://doc.oplist.org",
-  "scripts": "prepare": "node -e \"if (require('fs').existsSync('.git')) { try { require('child_process').execSync('husky'); } catch(e) {} }\"",
+  "scripts": "prepare": "node scripts/prepare.mjs",
     "start": "node dist-server/api/[...route].js",
     "fetch:frontend": "node scripts/fetch-frontend.mjs",
     "build": "node scripts/fetch-frontend.mjs && node scripts/build-edge.mjs",
