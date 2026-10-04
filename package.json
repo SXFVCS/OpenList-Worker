@@ -40,7 +40,7 @@
     "dist"
   ],
   "homepage": "https://doc.oplist.org",
-  "scripts": {
+  "scripts": husky
     "start": "node dist-server/api/[...route].js",
     "fetch:frontend": "node scripts/fetch-frontend.mjs",
     "build": "node scripts/fetch-frontend.mjs && node scripts/build-edge.mjs",
