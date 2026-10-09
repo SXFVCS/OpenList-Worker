@@ -40,7 +40,7 @@
     "dist"
   ],
   "homepage": "https://doc.oplist.org",
-  "scripts": "prepare": "node scripts/prepare.mjs",
+  "scripts": {
     "start": "node dist-server/api/[...route].js",
     "fetch:frontend": "node scripts/fetch-frontend.mjs",
     "build": "node scripts/fetch-frontend.mjs && node scripts/build-edge.mjs",
@@ -63,7 +63,7 @@
     "sls:package": "serverless package",
     "sls:info": "serverless info",
     "sls:remove": "serverless remove",
-    "prepare": "node -e \"if (require('fs').existsSync('.git')) { try { require('child_process').execSync('husky'); } catch(e) {} }\"",
+    "prepare": "node scripts/prepare.mjs",
     "lint": "tsc -p tsconfig.json --noEmit",
     "format": "prettier --ignore-path .gitignore -w \"src/backend/**/*.ts\""
   },
